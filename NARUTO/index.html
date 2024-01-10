@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        color: white;
+    }
+
+    .logo{
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        left: 75px;
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(255, 175, 25);
+        /* color: white; */
+    }
+
+    .container{
+        width: 100%;
+        height: 20vh;
+    }
+    
+    .web{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.30)), url("background.jpg");
+
+    }
+
+    nav ul{
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 40px;
+        /* border: 2px solid red; */
+        width: 53%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        padding: 0px 30px;
+        font-size: 20px;
+    }
+
+    a{
+        /* border: 2px solid red; */
+        text-decoration: none;
+        position: relative;
+    }
+
+    a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0; /* Initial width, which will expand during the animation */
+    height: 3px; /* Change the height as per your design */
+    background-color: rgb(255, 175, 25);; /* Change the color as per your design */
+    transition: all ease 0.55s; /* Animation effect */
+    }
+
+    a:hover::after{
+        width: 100%;
+    }
+    
+    a:hover{
+        color: rgb(233, 233, 233);
+    }
+
+    a.active::after{
+        width: 100%;
+    }
+
+    a.active{
+        color: rgb(233, 233, 233);
+    }
+    .content{
+        height: 80vh;
+
+    }
+
+    .content h1{
+        /* border: 2px solid red; */
+        text-align: center;
+        font-size: 80px;
+        font-weight: bold;
+        padding: 7% 0%;
+        height: 30px;
+    }
+
+    .content p{
+        /* border: 2px solid red ; */
+        width: 450px;
+        text-align: center;
+        margin: 10px auto;
+        font-size: 20px;
+    }
+
+    .buttons{
+        text-align: center;
+        margin: 40px;
+        padding: 0px 20px;
+    }
+
+    .content button{
+        border: 2px solid orange;
+        border-radius: 30px;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 10px 50px;
+        margin: 10px 10px;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    .content span{
+        background: rgb(255, 175, 25);;
+        height: 100%;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all ease 0.55s;
+        z-index: -1;
+    }
+
+    .content button:hover span {
+        width: 100%;
+    }
+
+    .content button:hover{
+        color: black;
+    }
+
+</style>
+
+<body>
+    <div class="web">
+        <div class="container">
+            <nav>
+                <p href="#" class="logo">Naruto</p>
+
+                <ul>
+                    <li><a href="#" class= "active">HOME</a></li>
+                    <li><a href="#">CHARACTERS</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="content">
+            <h1>Naruto Is Here</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, reprehenderit ut minus tempore.</p>
+
+            <div class="buttons">
+                <button type="button"><span></span>Watch Now</button>
+                <button type="button"><span></span>Subscribe</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

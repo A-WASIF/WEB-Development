@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Edu+SA+Beginner:wght@500&family=Lumanosimo&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Edu+SA+Beginner:wght@500&family=Lumanosimo&family=Mukta:wght@600&family=Oswald&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body{
+        color: white;
+        background: url('images/temp.jpg');
+        height: 3000px;
+    }
+    
+    .header{
+        position: sticky;
+        top: 0px;
+    }
+
+    .left{
+        display: inline-block;
+        border: none;
+        position: absolute;
+        left: 15px;
+        top: 20px;
+    }
+    
+    .left img{
+        height: 100px;
+        width: 240px;
+        filter: invert(100%);
+        margin: 0px;
+    }
+
+    .left div{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .mid{
+        font-family: 'Lumanosimo', cursive;
+        display: block;
+        /* border: 2px solid blue; */
+        width: 45%;
+        margin: 35px auto;
+        padding: 10px;
+
+    }
+
+    .right{
+        display: inline-block;
+        height: 50px;
+        /* border: 2px solid green; */
+        position: absolute;
+        right: 15px;
+        top: -15px;
+        margin: 24px 15px;
+    }
+
+    .navbar li{
+        display: inline-block;
+        
+    }
+    
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        margin: 23px;
+        font-size: 25px;
+    }
+
+    .navbar li a:hover, .navbar li a.active{
+        color: rgb(163, 163, 163);
+        text-decoration: underline;
+    }
+
+    .btn{
+        border: 2px solid rgb(39, 39, 39);
+        margin: 5px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0px 10px;
+        width: 130px;
+    }
+    
+    .btn1{
+        padding: 5px;
+        color: black;
+        background-color: rgb(69, 245, 66);
+        
+    }
+
+    .btn1:hover{
+        color: white;
+        background-color: black;
+    }
+
+    .btn2{
+        font-family: 'Lumanosimo', cursive;
+        padding: 5px;
+        height: 38px;
+    }
+    .btn2:hover{
+        color: black;
+        background-color: rgb(69, 245, 66);
+    }
+
+    .container{
+        /* border: 2px solid red; */
+        position: absolute;
+        top: 150px;
+        border-radius: 2px;
+        width: 45%;
+        margin: 10px 100px;
+        padding: 50px;
+    }
+
+    .container form div{
+        margin: 10px 0px;
+    }
+    
+    .container form div input{
+        width: 250px;
+        height: 25px;
+    }
+
+    .container p{
+        font-size: 50px;
+        /* color: rgb(46, 203, 104); */
+        margin: 50px 0px;
+    }
+
+    .container .btn3{
+        font-family: 'Lumanosimo', cursive;
+        border: 2px solid rgb(39, 39, 39);
+        border-radius: 3px;
+        color: black;
+        background-color: rgb(69, 245, 66);
+        
+        margin: 0px 181px;
+        padding: 3px;
+        font-size: 15px;
+
+    }
+
+    .container .btn3:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .container div input{
+        font-family: 'Poppins', sans-serif;
+    }
+
+</style>
+
+<body>
+    
+    <div class="left">
+        <img src="images/gymLogo.jpeg" alt="">
+        <div>FITNESS</div>
+    </div>
+
+    <header class="header ">
+        
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href = "#" class = "active">Home</a></li>
+                <li><a href = "#">About Us</a></li>
+                <li><a href = "#">Contact Us</a></li>
+                <li><a href = "#">Fitness</a></li>
+            </ul>
+        </div>
+        
+        <div class="right">
+            <button class = "btn btn2">Join Now</button>
+            <button class = "btn btn1">FREE PASS</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <p>ENTER YOUR DETAILS!</p>
+
+        <form action="backend">
+            <div>
+                <input type="text" name = "Name" placeholder="Enter Your Name">
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Enter Your Profession">
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Gender">
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Email">
+            </div>
+
+        </form>
+
+        <button class="btn3">Submit</button>
+    </div>
+</body>
+</html>
